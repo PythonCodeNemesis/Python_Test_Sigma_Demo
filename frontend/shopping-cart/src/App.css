@@ -1,18 +1,83 @@
-.app {
-  text-align: center;
-  padding: 30px;
+/* app.css */
+body {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
 .cart {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.cart h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart li {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.cart h2:last-child {
   margin-top: 20px;
 }
-button {
-  background-color: #008cba;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
+
+.add-to-cart {
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.add-to-cart h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.add-to-cart input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-to-cart button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 4px;
-  margin-top: 20px;
+}
+
+.add-to-cart button:hover {
+  background-color: #0056b3;
 }

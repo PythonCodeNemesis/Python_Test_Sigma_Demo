@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./App.css";
 
 function App() {
   const [cartContents, setCartContents] = useState({});
@@ -13,7 +14,9 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/view_cart");
+      const response = await axios.get(
+        "https://pythoncodenemesis.pythonanywhere.com/view_cart"
+      );
       setCartContents(response.data.cart_contents);
       setTotalPrice(response.data.total_price);
     } catch (error) {
@@ -23,10 +26,13 @@ function App() {
 
   const handleAddToCart = async () => {
     try {
-      await axios.post("http://localhost:5000/add_to_cart", {
-        item: itemToAdd,
-        quantity: quantityToAdd,
-      });
+      await axios.post(
+        "https://pythoncodenemesis.pythonanywhere.com/add_to_cart",
+        {
+          item: itemToAdd,
+          quantity: quantityToAdd,
+        }
+      );
       fetchData();
     } catch (error) {
       console.error("Error adding to cart:", error);
